@@ -7,4 +7,4 @@ RUN mvn clean install
 FROM openjdk:11-jre-slim
 WORKDIR /app
 COPY --from=build /app/target/app.jar /app/app.jar
-CMD ["java", "-jar", "/app/your-application.jar"]
+CMD ["java", "-jar", "/app/app.jar"]
